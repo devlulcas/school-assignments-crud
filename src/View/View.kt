@@ -8,12 +8,12 @@ class View {
     private val schoolTaskController = SchoolTaskController()
 
     // Create
-    public fun createSchoolTask() {
+    fun createSchoolTask() {
         println("\n---------------------\n")
         println("Título")
         val title = readLine()!!.trim().uppercase()
 
-        // The date when the activty was created
+        // The date when the     activty was created
         val now = LocalDateTime.now()
         val creationDate = "${now.dayOfMonth}/${now.month}"
 
@@ -28,7 +28,7 @@ class View {
     }
 
     // Read
-    public fun seeSchoolTask() {
+    fun seeSchoolTask() {
         println("\n---------------------\n")
         println("Atividades:")
         for (index in schoolTaskController.taskList.indices) {
@@ -47,7 +47,7 @@ class View {
         }
     }
 
-    public fun editSchoolTask() {
+    fun editSchoolTask() {
         println("\n---------------------\n")
 
         showResumedTasks()
@@ -67,7 +67,7 @@ class View {
         schoolTaskController.updateTask(taskIndex, title, deliverDate, observation)
     }
 
-    public fun deleteSchoolTask() {
+    fun deleteSchoolTask() {
         println("\n---------------------\n")
 
         showResumedTasks()
