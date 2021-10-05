@@ -3,7 +3,7 @@ package Controller
 import Model.SchoolTask
 
 class SchoolTaskController(
-    var taskList: ArrayList<SchoolTask> = arrayListOf()
+    var taskList: MutableList<SchoolTask> = mutableListOf()
 ) {
 
     fun addTask(title: String, creationDate: String, deliverDate: String, observation: String) {

@@ -13,7 +13,7 @@ class View {
         println("Título")
         val title = readLine()!!.trim().uppercase()
 
-        // The date when the     activty was created
+        // The date when the activity was created
         val now = LocalDateTime.now()
         val creationDate = "${now.dayOfMonth}/${now.month}"
 
@@ -89,7 +89,7 @@ class View {
     }
 
     private fun showResumedTasks() {
-        val allSchoolTasks: ArrayList<SchoolTask> = schoolTaskController.taskList
+        val allSchoolTasks: MutableList<SchoolTask> = schoolTaskController.taskList
         for (index in allSchoolTasks.indices) {
             val task = allSchoolTasks.elementAt(index)
             println(
